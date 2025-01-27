@@ -129,19 +129,24 @@ header .header-bar {
 	grid-template-areas:
 		'projects announcements'
 		'projects trending';
-	grid-template-columns: 2fr 1fr;
+	grid-template-columns: 3fr 1fr;
+	gap:20px;
+}
+.explore > * {
+	display: grid;
+	grid-template-rows: 40px 1fr;
+	padding: 1rem;
 }
 
 .explore .projects {
 	grid-area: projects;
 	background-color: yellowgreen;
-	display: grid;
-	grid-template-rows: 40px 1fr;
-	padding: 1rem;
 }
+
 .projects h3 {
 	align-self: center;
 }
+
 .projects .project-list {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -158,17 +163,40 @@ header .header-bar {
 	grid-template-rows: 1fr 6fr 1fr;
 }
 
-.project-card .actions{
+.project-card .actions {
 	justify-self: end;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 }
 .explore .announcements {
 	grid-area: announcements;
-	background-color: brown;
+	background-color: brown;	
+}
+
+.announcements .ann-container{
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+}
+
+.ann-container .item{
+}
+
+.ann-container .item:not(:last-child){
+	margin-bottom:10px;
+	border-bottom: 1px solid grey;
 }
 
 .explore .trending {
 	grid-area: trending;
 	background-color: deeppink;
+}
+
+.trending .person{
+	margin-bottom:10px;
+}
+
+.explore .trending,
+.explore .announcements{
+	margin:1rem;
+	padding:2rem;
 }
