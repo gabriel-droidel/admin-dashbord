@@ -124,24 +124,51 @@ header .header-bar {
 }
 
 /*Projects*/
-.main-content .explore{
+.main-content .explore {
 	display: grid;
-	grid-template-areas: 'projects announcements'
-	'projects trending';
-	grid-template-columns: 2fr 1fr;	
+	grid-template-areas:
+		'projects announcements'
+		'projects trending';
+	grid-template-columns: 2fr 1fr;
 }
 
-.explore .projects{
+.explore .projects {
 	grid-area: projects;
 	background-color: yellowgreen;
+	display: grid;
+	grid-template-rows: 40px 1fr;
+	padding: 1rem;
+}
+.projects h3 {
+	align-self: center;
+}
+.projects .project-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 20px;
 }
 
-.explore .announcements{
+.project-list .project-card {
+	height: 250px;
+	border-left: solid orange 5px;
+	padding: 2rem 1rem;
+	border-radius: 5px;
+	background-color: wheat;
+	display: grid;
+	grid-template-rows: 1fr 6fr 1fr;
+}
+
+.project-card .actions{
+	justify-self: end;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.explore .announcements {
 	grid-area: announcements;
 	background-color: brown;
 }
 
-.explore .trending{
-	grid-area:trending;
+.explore .trending {
+	grid-area: trending;
 	background-color: deeppink;
 }
