@@ -55,7 +55,7 @@ body {
 .sidebar {
 	background-color: var(--main-color);
 	color: white;
-	padding: 1rem;
+	padding: 1rem 1.5rem;
 	font-size: 20px;
 	font-weight: bold;
 
@@ -92,7 +92,7 @@ nav ul:last-child {
 
 nav ul {
 	display: grid;
-	gap: 15gpx;
+	gap: 15px;
 }
 
 /*Main Content*/
@@ -229,6 +229,7 @@ h3 {
 	font-weight: bold;
 	font-family: inherit;
 	font-size: 1.2rem;
+	color:black;
 }
 
 .projects .project-list {
@@ -243,7 +244,7 @@ h3 {
 	padding: 2rem 1rem;
 	border-radius: 5px;
 	background-color: white;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 6px;
+	box-shadow: var(--third-color) 0px 3px 6px;
 	display: grid;
 	grid-template-rows: 1fr 6fr 1fr;
 }
@@ -272,33 +273,42 @@ h3 {
 }
 .explore .announcements {
 	grid-area: announcements;
-	background-color: brown;	
 }
 
 .announcements .ann-container{
-	display: grid;
-	grid-template-rows: 1fr 1fr 1fr;
+	padding:30px;
+	background-color: white;
+	color:var(--third-color);
+	border-radius: 10px;
+	box-shadow: var(--third-color) 0 3px 6px;
 }
 
-.ann-container .item{
+.ann-container .item p{
+	font-size: 80%;
+
 }
+
+.ann-container .item .item-name{
+	color:black;
+	font-weight: bold;
+} 
 
 .ann-container .item:not(:last-child){
-	margin-bottom:10px;
-	border-bottom: 1px solid grey;
+	margin-bottom:30px;
+	border-bottom: 1px solid var(--third-color);
+	padding-bottom: 15px;
 }
 
 .explore .trending {
 	grid-area: trending;
-	background-color: deeppink;
+	
 }
 
+.trending .tren-container{
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: var(--third-color) 0 3px 6px;
+	padding:30px;
+}
 .trending .person{
-	margin-bottom:10px;
-}
-
-.explore .trending,
-.explore .announcements{
-	margin:1rem;
-	padding:2rem;
 }
