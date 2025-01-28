@@ -35,6 +35,7 @@ img {
 }
 
 /*Styling*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
 	--main-color: rgb(48, 151, 248);
@@ -42,6 +43,7 @@ img {
 }
 body {
 	min-height: 100vh;
+	font-family: 'Roboto', sans-serif;
 
 	display: grid;
 	grid-template-columns: 250px 1fr;
@@ -51,9 +53,34 @@ body {
 	background-color: var(--main-color);
 	color: white;
 	padding: 1rem;
+	font-size: 20px;
+	font-weight: bold;
 
 	display: grid;
 	grid-template-rows: 100px 1fr;
+}
+
+.sidebar .logo{
+	font-size: 28px;
+
+}
+.sidebar .logo svg{
+	width: 36px;
+}
+
+.sidebar .logo,
+.sidebar li{
+	display: flex;
+	align-items: center;
+	gap:15px;
+	font-family: inherit;
+	font-weight: bold;
+}
+
+.sidebar svg {
+	width: 24px;
+	height: auto;
+	color:white;
 }
 
 nav ul:last-child {
@@ -62,7 +89,7 @@ nav ul:last-child {
 
 nav ul {
 	display: grid;
-	gap: 10px;
+	gap: 15px;
 }
 
 /*Main Content*/
@@ -149,7 +176,8 @@ header .header-bar {
 
 .projects .project-list {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-template-rows: repeat(auto-fill,minmax(200px,1fr));
 	gap: 20px;
 }
 
