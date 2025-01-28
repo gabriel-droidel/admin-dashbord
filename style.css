@@ -89,7 +89,7 @@ nav ul:last-child {
 
 nav ul {
 	display: grid;
-	gap: 15px;
+	gap: 15gpx;
 }
 
 /*Main Content*/
@@ -102,13 +102,13 @@ nav ul {
 .main-content header {
 	display: grid;
 	grid-template-rows: 1fr 2fr;
-	background-color: green;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	font-family: inherit;
 }
 
 header .header-bar {
 	display: grid;
 	grid-template-columns: 3fr 1fr;
-	background-color: blue;
 	align-items: center;
 	padding-right: var(--content-padding);
 	padding-left: var(--content-padding);
@@ -116,9 +116,40 @@ header .header-bar {
 
 .header-bar .icons {
 	display: grid;
-	grid-template-columns: 20px 30px 1fr;
+	grid-template-columns: 20px 70px 1fr;
+	gap:10px;
 	justify-self: end;
-	gap: 5px;
+	align-items: center;
+}
+.header-bar .name{
+	font-weight: bold;
+}
+.icons svg{
+	width: 20px;
+	height: auto;
+}
+.header-bar .icon img{
+	width: 70px;
+	height: auto;
+}
+.search-bar{
+	display: flex;
+	align-items: center;
+	gap:5px;
+}
+
+.search-bar input{
+	border:none;
+	background-color:rgb(204, 226, 248);
+	border-radius: 10px;
+	padding:0.3rem 1rem;
+	width: 50%;
+}
+
+.search-bar svg {
+	color:black;
+	width: 22px;
+	height: auto;
 }
 
 .header-actions {
@@ -132,24 +163,42 @@ header .header-bar {
 .header-actions .introduction {
 	padding: 1rem;
 	display: grid;
-	grid-template-columns: 40px 1fr;
+	grid-template-columns: 100px 1fr;
 	align-items: center;
 	gap: 5px;
+	font-weight: bold;
+}
+.introduction .icon {
+	width: 100px;
+	height: auto;
 }
 
 .introduction p {
 	margin-bottom: 5px;
-	font-style: italic;
-	font-size: 90%;
+	font-weight: inherit;
+	font-size: 80%;
+}
+
+.introduction .name-tag{
+	font-size: 1.1rem;
 }
 
 .header-actions .buttons {
 	display: grid;
-	grid-template-columns: repeat(3, 80px);
+	grid-template-columns: repeat(3, 1fr);
 	justify-self: end;
 	gap: 15px;
 }
 
+.buttons button {
+	background-color: var(--main-color);
+	border:none;
+	padding:0.5rem 1.5rem;
+	border-radius: 15px;
+	color:white;
+	font-weight: bold;
+	font-size:0.9rem;
+}
 /*Projects*/
 .main-content .explore {
 	display: grid;
